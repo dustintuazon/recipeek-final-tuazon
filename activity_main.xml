@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F16C4F"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/reciTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:fontFamily="@font/roboto_thin"
+        android:scaleX="1.22"
+        android:text="Reci"
+        android:textColor="#FFFFFF"
+        android:textSize="65sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.346" />
+
+    <TextView
+        android:id="@+id/peekTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:fontFamily="@font/roboto_thin"
+        android:scaleX="1.22"
+        android:text="PeeK"
+        android:textColor="#FFFFFF"
+        android:textSize="65sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/reciTxt"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/croissantImg"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:tint="#FFFFFF"
+        app:layout_constraintEnd_toStartOf="@+id/cakeImg"
+        app:layout_constraintTop_toBottomOf="@+id/peekTxt"
+        app:srcCompat="@drawable/croissant" />
+
+    <ImageView
+        android:id="@+id/cakeImg"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:tint="#FFFFFF"
+        app:layout_constraintEnd_toStartOf="@+id/pizzaImg"
+        app:layout_constraintTop_toBottomOf="@+id/peekTxt"
+        app:srcCompat="@drawable/cake" />
+
+    <ImageView
+        android:id="@+id/pizzaImg"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:rotation="180"
+        android:tint="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="@+id/peekTxt"
+        app:layout_constraintStart_toStartOf="@+id/peekTxt"
+        app:layout_constraintTop_toBottomOf="@+id/peekTxt"
+        app:srcCompat="@drawable/pizza" />
+
+    <ImageView
+        android:id="@+id/dinnerImg"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:tint="#FFFFFF"
+        app:layout_constraintStart_toEndOf="@+id/pizzaImg"
+        app:layout_constraintTop_toBottomOf="@+id/peekTxt"
+        app:srcCompat="@drawable/restaurant" />
+
+    <ImageView
+        android:id="@+id/hotpotImg"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:tint="#FFFFFF"
+        app:layout_constraintStart_toEndOf="@+id/dinnerImg"
+        app:layout_constraintTop_toBottomOf="@+id/peekTxt"
+        app:srcCompat="@drawable/hotpot" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UserProfileActivity">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/headerCardView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/light_red"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/backBtn"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/back"
+            android:backgroundTint="@color/white" />
+
+        <TextView
+            android:id="@+id/headerTxtView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="60dp"
+            android:text="@string/my_profile"
+            android:textColor="@color/white"
+            android:textSize="34sp" />
+    </androidx.cardview.widget.CardView>
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/headerCardView">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_border">
+
+                <Button
+                    android:id="@+id/editProfileBtn"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/edit"
+                    android:backgroundTint="@color/light_red"
+                    app:layout_constraintBottom_toBottomOf="@+id/usernameTxtView"
+                    app:layout_constraintStart_toEndOf="@+id/usernameTxtView"
+                    app:layout_constraintTop_toTopOf="@+id/usernameTxtView" />
+
+                <TextView
+                    android:id="@+id/profileDetailsTxtView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="5dp"
+                    android:text="@string/profile"
+                    app:layout_constraintStart_toStartOf="@+id/usernameTxtView"
+                    app:layout_constraintTop_toBottomOf="@+id/usernameTxtView" />
+
+                <TextView
+                    android:id="@+id/usernameTxtView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginBottom="15dp"
+                    android:text="@string/username_user"
+                    android:textSize="34sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/userImgView"
+                    app:layout_constraintStart_toEndOf="@+id/userImgView"
+                    app:layout_constraintTop_toTopOf="@+id/userImgView" />
+
+                <ImageView
+                    android:id="@+id/userImgView"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/user_1" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <Button
+                android:id="@+id/recipesBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_border"
+                android:paddingStart="10dp"
+                android:text="@string/my_recipes"
+                android:textAlignment="viewStart"
+                android:textAllCaps="false"
+                android:textColor="@color/light_red"
+                android:textSize="24sp" />
+
+            <Button
+                android:id="@+id/favoritesBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_border"
+                android:paddingStart="10dp"
+                android:text="@string/favorites"
+                android:textAlignment="viewStart"
+                android:textAllCaps="false"
+                android:textColor="@color/light_red"
+                android:textSize="24sp" />
+
+            <Button
+                android:id="@+id/historyBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_border"
+                android:paddingStart="10dp"
+                android:text="@string/history"
+                android:textAlignment="viewStart"
+                android:textAllCaps="false"
+                android:textColor="@color/light_red"
+                android:textSize="24sp" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="180dp">
+
+                <Button
+                    android:id="@+id/addRecipeBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/button_bg"
+                    android:paddingStart="15dp"
+                    android:paddingEnd="15dp"
+                    android:text="@string/add_recipe"
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="24sp" />
+            </androidx.cardview.widget.CardView>
+
+            <Button
+                android:id="@+id/aboutUsBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:background="@drawable/button_border"
+                android:paddingStart="10dp"
+                android:text="@string/about_us"
+                android:textAlignment="viewStart"
+                android:textAllCaps="false"
+                android:textColor="@color/light_red"
+                android:textSize="24sp" />
+
+            <Button
+                android:id="@+id/rateUsBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:background="@drawable/button_border"
+                android:paddingStart="10dp"
+                android:text="@string/rate_us"
+                android:textAlignment="viewStart"
+                android:textAllCaps="false"
+                android:textColor="@color/light_red"
+                android:textSize="24sp" />
+
+            <Button
+                android:id="@+id/feedbackBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:background="@drawable/button_border"
+                android:paddingStart="10dp"
+                android:text="@string/feedback"
+                android:textAlignment="viewStart"
+                android:textAllCaps="false"
+                android:textColor="@color/light_red"
+                android:textSize="24sp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
